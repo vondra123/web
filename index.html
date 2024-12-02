@@ -182,6 +182,10 @@
             background-color: #444;
             margin: 20px;
         }
+        .newclass {
+            color: aqua;
+
+        }
     </style>
     <script>
         function toggleMenu() {
@@ -189,15 +193,19 @@
             const menu = document.querySelector('.quick-menu')
             menu.classList.toggle('opened');
         }
+        function changecolor() {
+            console.info(`color change`)
+                document.getElementsByClassName(`top-section`)[0].classList.add(`newclass`)
+        }
     </script>
 </head>
 <body>
     <div class="top-section">
         <h1 class="title">Úvodní Stránka</h1>
         <div class="buttons-container">
-            <a href="#" class="button">Tlačítko 1</a>
-            <a href="#" class="button">Tlačítko 2</a>
-            <a href="#" class="button">Tlačítko 3</a>
+            <a href="#" class="button" onclick="changecolor()">Tlačítko 1</a>
+            <a href="#" class="button" onclick="changecolor()">Tlačítko 2</a>
+            <a href="#" class="button" onclick="changecolor()">Tlačítko 3</a>
         </div>
         <div class="wave"></div>
     </div>
@@ -230,6 +238,7 @@
     <footer class="footer">
         Copyright SPŠ-CL &copy; 2024. All rights reserved.
     </footer>
+    <button class="button" onclick="changecolor()"></button>
     <button class="sticky-button" onclick="toggleMenu()">+</button>
     <div class="quick-menu">
         <a href="https://google.com">Google</a>
